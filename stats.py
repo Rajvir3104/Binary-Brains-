@@ -4,7 +4,7 @@ import numpy as np
 
 
 stat_data = pd.read_csv(
-    r"/Users/rajvirsingh/Desktop/Personal Projects/HackTheChange2023/Binary-Brains-/co-emissions-per-capita.csv"
+    r"Data\co-emissions-per-capita.csv"
 )
 
 canada_stat_data = stat_data[stat_data["Entity"] == "Canada"]
