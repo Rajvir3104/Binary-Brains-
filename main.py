@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
 import input_function as ip
-
 total_co2 = ip.total_emissions()
->>>>>>> 5e8687ff3a9b8fbf023cf3721bb951dbf6e38501
+print(f"Your yearly total CO2 emissions in tons is: {total_co2:.2f} Tons CO2")

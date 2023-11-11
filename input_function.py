@@ -30,10 +30,12 @@ def total_emissions():
     car_type = get_car_type()
 
     travel_km_values = { "Petrol Car":0.17, "Hybrid Car":0.068, "Electric Car": 0.047}
-    c02_car = travel_km_values[car_type] * daily_drive_km #the co2 is in kg
+    co2_car = travel_km_values[car_type] * daily_drive_km * 365 #the co2 is in kg
 
+    co2_flight = flights_per_year * 100000000
+    co2_age = 100000000
     # Add flight c02 calculations here
 
-    total = (co2_car )/1000 #converting to tons
+    total = (co2_car + co2_flight + co2_age)/1000 #converting to tons
     return total
 
