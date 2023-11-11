@@ -11,7 +11,7 @@ class user:
 
     def __init__(self, num_flights):
         """
-            Initialize the angle and initial velocity of the projectile
+            Initializes the Users Data
             
             Parameters
             ----------
@@ -24,7 +24,7 @@ class user:
         
         self.num_flights = num_flights
 
-    def flight_emissions(number_of_flight):
+    def flight_emissions(self):
         """
             Calculating the CO2 emissions per # of flight
 
@@ -58,7 +58,7 @@ class user:
             y+=1
 
 
-        emission_per_flight = statistics.mean(emission_per_flight) * number_of_flight
+        emission_per_flight = statistics.mean(emission_per_flight) * self.num_flights
 
         return(emission_per_flight)
     
@@ -103,6 +103,7 @@ class user:
         total = (co2_car + co2_flight + co2_age)/1000 #converting to tons
         return total
 
+    
 
 
 
