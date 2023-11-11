@@ -102,6 +102,8 @@ class user:
 
         total = (co2_car + co2_flight + co2_age)/1000 #converting to tons
         return total
+    
+    
 
     
 
