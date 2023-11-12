@@ -21,7 +21,5 @@ def total_emissions():
 total = total_emissions()
 
 print(f"Your total emissions for a year is: {total:.0f} Tons of CO2")
-
-x = stats.point_system(total, stats.average_carbon_canada)
-
-print(x)
+sus_score = stats.point_system(total, stats.average_carbon_canada)
+print(f"The average scroe is 50 and your sustainability score is: {sus_score}")
