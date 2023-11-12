@@ -22,6 +22,7 @@ def total_emissions():
 
     co2_flight = fn.flight_emissions(flights_per_year)
     co2_age = fn.age_emissions(age)
+    co2_clothing=fn.clothing_emissions
     # Add flight c02 calculations here
 
     total = co2_car + co2_flight + co2_age  # converting to tons
