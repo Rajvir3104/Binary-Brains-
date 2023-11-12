@@ -23,3 +23,9 @@ def point_system(total_personal_emission, average_carbon_canada):
         score = "100+"
 
     return score
+
+
+airline_data = pd.read_csv(r"Data\Airlines.csv")
+
+airline_data = airline_data["Airlines"] #reads out airline columns data
+print(airline_data)
