@@ -1,4 +1,5 @@
 import Functions as fn
+import stats
 
 
 def total_emissions():
@@ -21,3 +22,6 @@ total = total_emissions()
 
 print(f"Your total emissions for a year is: {total:.0f} Tons of CO2")
 
+x = stats.point_system(total, stats.average_carbon_canada)
+
+print(x)

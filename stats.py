@@ -11,7 +11,7 @@ canada_stat_data = stat_data[stat_data["Entity"] == "Canada"]
 pd.DataFrame(canada_stat_data)
 canada_stat_data = canada_stat_data.iloc[216:222]
 
-carbon_emissions = canada_stat_data["AnnualCO2Emissions"]
+carbon_emissions = canada_stat_data["Annual CO₂ emissions (per capita)"]
 carbonCanada = np.array([carbon_emissions])
 average_carbon_canada = carbonCanada.mean()
 
