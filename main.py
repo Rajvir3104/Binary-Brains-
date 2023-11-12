@@ -1,6 +1,7 @@
 import Functions as fn
 import stats
 
+
 def total_emissions():
     age = int(
         input("Enter your age: ")
@@ -9,15 +10,18 @@ def total_emissions():
     daily_drive_km = float(input("Enter average daily kilonmeters driven: "))
     car_type = fn.get_car_type()
 
-    travel_km_values = { "Petrol Car":0.17, "Hybrid Car":0.068, "Electric Car": 0.047}
-    co2_car = (travel_km_values[car_type] * daily_drive_km * 365)/1000 #the co2 is in kg
+    travel_km_values = {"Petrol Car": 0.17, "Hybrid Car": 0.068, "Electric Car": 0.047}
+    co2_car = (
+        travel_km_values[car_type] * daily_drive_km * 365
+    ) / 1000  # the co2 is in kg
 
     co2_flight = fn.flight_emissions(flights_per_year)
     co2_age = fn.age_emissions(age)
     # Add flight c02 calculations here
 
-    total = co2_car + co2_flight + co2_age #converting to tons
+    total = co2_car + co2_flight + co2_age  # converting to tons
     return total
+
 
 total = total_emissions()
 
