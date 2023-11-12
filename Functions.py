@@ -115,18 +115,28 @@ class user:
         total = (co2_car + co2_flight + co2_age) / 20000000  # converting to tons
         return total
         
-    def calculate_emissions(item, quantity):
-        item_emission = CO2_PER_ITEM.get(item)* quantity
-        return item_emission
-    
-    emission = 0
-    for item in CO2_PER_ITEM:
-        quantity = print(float(input("How many %s do you buy per year?".format(item))))
-        emission = calculate_emissions(item,quantity) + emission
+    def calculate_annual_co2_emissions():
 
-#     # print("Where do you usually buy %s".format(item))
-#     # for shop in SHOP_LOCATIONS:
-#     #     print(shop)
-#     # location = print(input())
 
-    print("Your total CO2 emissions from buying clothing: {:.2f} tonnes per year".format(emission))
+        CO2_PER_ITEM = {
+            "shoes": 0.0136078,
+            "shirts": 0.006117828,
+            "hoodies": 0.0136078,
+            "jeans":0.022,
+            "jackets": 0.07002,}
+        
+        def calculate_emissions(item, quantity):
+            item_emission = CO2_PER_ITEM.get(item)* quantity
+            return item_emission
+        
+        emission = 0
+        for item in CO2_PER_ITEM:
+            quantity = print(float(input("How many %s do you buy per year?".format(item))))
+            emission = calculate_emissions(item,quantity) + emission
+
+    #     # print("Where do you usually buy %s".format(item))
+    #     # for shop in SHOP_LOCATIONS:
+    #     #     print(shop)
+    #     # location = print(input())
+
+        print("Your total CO2 emissions from buying clothing: {:.2f} tonnes per year".format(emission))
