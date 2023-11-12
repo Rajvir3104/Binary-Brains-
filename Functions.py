@@ -104,5 +104,86 @@ class user:
         return total
 
 
+# #######################
+# #######################
+# #######################
+
+# def clothing_total_emissions():
+#         AVERAGE_PER_CLOTHING = 0
+    
+#         CO2_PER_BRAND = {
+#         "Nike": 7.33,
+#         "Adidas": 8,
+#         "H&M": 1964,
+#         "Marks": 1964,
+#         "Lululemon": 1964,
+#         "George": 1964,
+#         "Aritzia": 1964,
+#         "Levi": 1964,
+#         "Under Armour": 1964,
+#         "Hollister": 1964,}
+        
+#         def print_brands():
+#             for brand in CO2_PER_BRAND:
+#                 print("\t" + brand)
+
+#         def calculate_emissions(brand, quantity):
+#             return CO2_PER_BRAND.get(brand, AVERAGE_PER_CLOTHING) * quantity
+
+#         bought = int(input("How many clothing items do you buy per week? "))
+#         choice = input("Did you shop from these brands? YES or anything else for NO").lower()
+#         print_brands()
+#         emmission = 0
+#         count = 0
+#         while choice == "yes":
+#             print_brands()
+#             count += 1
+#             brand = input("Which brand did you shop from? ").capitalize()
+#             quantity = int(input("How many items did you buy from {}? ".format(brand)))
+#             emmission += calculate_emissions(brand, quantity)
+#             choice = input("Did you shop from another brand? (YES/NO)").lower()
+
+#         if bought - count > 0:
+#             emmission += (bought - count) * AVERAGE_PER_CLOTHING
+
+#         print("Your total CO2 emissions from buying clothing: {:.2f} tonnes per year".format(emmission))
+
+########################
+########################
+########################
+
+def calculate_annual_co2_emissions():
 
 
+    CO2_PER_ITEM = {
+        "shoes": 0.0136078,
+        "shirts": 0.006117828,
+        "hoodies": 0.0136078,
+        "jeans":0.022,
+        "jackets": 0.07002,}
+
+#     # SHOP_LOCATIONS = {
+#     #     "mall": 0.15,
+#     #     "online": 0.20,
+#     #     "local": 0.1,
+#     #     "thrift": 0.01}
+
+
+    def calculate_emissions(item, quantity):
+        item_emission = CO2_PER_ITEM.get(item)* quantity
+        return item_emission
+    
+    emission = 0
+    for item in CO2_PER_ITEM:
+        quantity = print(float(input("How many %s do you buy per year?".format(item))))
+        emission = calculate_emissions(item,quantity) + emission
+
+#     # print("Where do you usually buy %s".format(item))
+#     # for shop in SHOP_LOCATIONS:
+#     #     print(shop)
+#     # location = print(input())
+
+    print("Your total CO2 emissions from buying clothing: {:.2f} tonnes per year".format(emission))
+
+################################
+calculate_annual_co2_emissions()
