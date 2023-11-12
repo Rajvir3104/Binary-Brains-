@@ -106,7 +106,6 @@ class user:
         }
         co2_car = travel_km_values[car_type] * daily_drive_km * 365  # the co2 is in kg
 
-        print("hello it is ", flights_per_year)
         co2_flight = flights_per_year * 100000000
         co2_age = 100000000
         # Add flight c02 calculations here
