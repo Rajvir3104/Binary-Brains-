@@ -1,10 +1,11 @@
+# 
 import pandas as pd
 from pandas import DataFrame
 import numpy as np
 
 
 stat_data = pd.read_csv(
-    r"Data\co-emissions-per-capita.csv"
+    r"Data/co-emissions-per-capita.csv"
 )
 
 canada_stat_data = stat_data[stat_data["Entity"] == "Canada"]
@@ -25,7 +26,13 @@ def point_system(total_personal_emission, average_carbon_canada):
     return score
 
 
-airline_data = pd.read_csv(r"Data\Airlines.csv")
+clothing_data = pd.read_csv(r"Fashion2.csv")
+airline_data = pd.read_csv(r"Data/Airlines.csv")
 
+
+clothing_company = clothing_data["Company"]
 airline_data = airline_data["Airlines"] #reads out airline columns data
+
+
 print(airline_data)
+print(clothing_data)
