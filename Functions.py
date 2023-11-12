@@ -107,8 +107,11 @@ class user:
         co2_car = travel_km_values[car_type] * daily_drive_km * 365  # the co2 is in kg
 
         co2_flight = flights_per_year * 100000000
+        
         co2_age = 100000000
+        
         # Add flight c02 calculations here
 
-        total = (co2_car + co2_flight + co2_age) / 1000  # converting to tons
+        total = (co2_car + co2_flight + co2_age) / 20000000  # converting to tons
         return total
+        
